@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://use.typekit.net/ogn6gra.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zxs4vkp.css">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <script src="textEffect.js" defer></script>
+    <script src="/lazyBG.js" defer></script>
+    <!-- <script src="smoothScroll.js" defer></script> -->
+    <title>Sky LaRoche Design</title>
+</head>
+
+<!-- TODO LIST
+- mobile hamburger menu
+- polish piece pages
+- use right viewport for mobile
+- implement text effect
+- optimize images
+- image carosel on about page
+- optimize for mobile
+- work switcher
+- clean up css
+- footer
+
+DREAM LIST
+- automatic slideshow on hover
+- audio player
+- animate flexbox order
+- work switcher as tabs
+- custom colors for each piece page
+- automatic text effect when not moving mouse
+- personal logo
+
+LIST OF PORTFOLIO PIECES
+- Zunreal
+- Prod Davis
+- Vivalon Car Wraps
+- Nourish Logo
+- Strblze album cover
+
+- ArtSafe
+- Inventory of instruments
+- Sound map
+- This Website
+- Pet Rescue Site?
+
+- Ux sound buttons
+- Starkle
+- Some songs
+- Sketchbook pages
+- 
+-  -->
+
+
+<body>
+    <nav>
+        <img src="/SVG/Sky.svg" width="100px">
+        <!-- <img src="SVG/Sky.svg" width="100px"> -->
+        <ul>
+            <li><a id="abt-btn" class="btn" href="/index.html">About</a></li>
+            <li><a id="work-btn" class="btn" href="work/allWork.html">Work</a></li>
+            <li><a id="contact-btn" class="btn contact-toggle">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </div>
+    </nav>
+
+    <div id="contact-bg">
+        <div id="contact">
+                <span class="material-symbols-outlined contact-toggle">
+                    close
+                </span>
+
+            <div id="contact-bio">
+                <img src="/pieces/prod/Prod. Davis comp.avif">
+                <div>
+                    <h3>Sky LaRoche</h3>
+                    <p>
+                        Designer <br>
+                        <!-- skylaroche1@gmail.com<br>
+                        415-450-5378<br> -->
+                    </p>
+                </div>
+            </div>
+
+            <!-- <h2>Let's Talk!</h2> -->
+            <a class="btn">Email</a>
+            <a class="btn">Behance</a>
+            <a class="btn">Instagram</a>
+            <a class="btn">Schedule Meeting</a>
+        </div>
+    </div>
+
+    <header id="splash">
+        <div id="textEffect">
+            <img id="sourceSkyBlur" src="SVG/SkyBlur.svg">
+            <img id="sourceSky" src="SVG/Sky.svg">
+            <canvas id="interaction" height="400px" width = "700px"></canvas>
+            <canvas id="grdCanvas" height="10px" width ="255px"></canvas>
+        </div>
+        <div>
+            <h1>Sky LaRoche</h1>
+            <h3>Designer for a more beautiful life</h3>
+        </div>
+    </header>
+    
+    <h2>About Me</h2>
+    <section id="aboutMe">
+        <!-- <img src="images/Hiromix Test.png" id="headShot"> -->
+            <div id="head-shot"></div>
+        <div>
+            <h3>Welcome! I'm Sky LaRoche.</h3>
+            <p>
+                I'm a fourth-year UI/UX and Graphic Design student at UC Davis. My design approach combines a strong foundation in design principles with experimental flair, creating simple, readable interfaces with an artsy twist. Inspired by modernism, postmodernism, and metamodernism, I draw from diverse influences like handmade items, classic swiss typography, punk zines, and vintage electronics. Aspiring to be a UX unicorn, I bring solid HTML/CSS/JS skills to the table. Join me in a design journey that's all about innovation and breaking the mold. Check out my portfolio for a taste of creativity meeting functionality.
+            </p>
+            <div id="skills">
+                <ul>
+                    <li>
+                        <a>
+                            All Work 
+                            <span class="material-symbols-outlined">arrow_outward</span>
+                        </a>
+                    <li>
+                        <a>
+                            Ui/Ux
+                            <span class="material-symbols-outlined">arrow_outward</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            Graphic
+                            <span class="material-symbols-outlined">arrow_outward</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            More
+                            <span class="material-symbols-outlined">arrow_outward</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
