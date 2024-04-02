@@ -6,7 +6,6 @@
 
 
     //Hamburger Menu
-
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('nav ul');
     const navLinks = document.querySelectorAll("nav ul li a");
@@ -26,7 +25,7 @@
     
 
     //Contact Sheet
-
+    const body = document.querySelector("body");
     const contactToggles = document.querySelectorAll('.contact-toggle');
     const contact = document.querySelector('#contact');
     const contactSheet = document.querySelector('#contact-bg');
@@ -35,6 +34,7 @@
       toggle.addEventListener('click', (e) => {
         contactSheet.classList.toggle("active");
         contact.classList.toggle("active");
+        body.classList.toggle("no-scroll");
         console.log("clicked contact toggle")
       });
     });

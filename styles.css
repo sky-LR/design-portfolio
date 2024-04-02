@@ -45,6 +45,10 @@ body{
     color: rgb(12, 12, 12);
 }
 
+.no-scroll{
+    overflow: hidden;
+}
+
 /* --------------------- SPLASH SECTION --------------------- */
 
 #splash{
@@ -540,5 +544,11 @@ audio{
 
     #splash{
         height: 100vh;
+    }
+
+    footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 }
