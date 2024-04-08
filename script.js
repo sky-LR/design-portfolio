@@ -9,19 +9,20 @@
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('nav ul');
     const navLinks = document.querySelectorAll("nav ul li a");
-
-    hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("active");
-      navMenu.classList.toggle("active");
-      console.log("clicked menu toggle")
-    })
-    
-    navLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
+    if(navMenu){
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        console.log("clicked menu toggle")
       })
-    })
+      
+      navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+        })
+      })
+    }
     
 
     //Contact Sheet
@@ -38,6 +39,13 @@
         console.log("clicked contact toggle")
       });
     });
+
+  //quicklook tags
+    const tags  = document.querySelectorAll(".quick-look ul li");
+    tags.forEach(tag => {
+      tag.style.color = `var(${tag.dataset.tagcolor})`;
+      tag.style.borderColor = `var(${tag.dataset.tagcolor})`;
+  });
 
 
 

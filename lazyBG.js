@@ -41,7 +41,6 @@
                 entry.target.style.opacity = "1";
                 articleObserver.unobserve(entry.target);
               }
-
             });
           }
 
