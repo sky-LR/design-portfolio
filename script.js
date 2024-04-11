@@ -8,9 +8,9 @@
     //Hamburger Menu
     const hamburger = document.querySelector('.hamburger');
     const navBar = document.querySelector('nav');
-    const navMenu = document.querySelector('nav ul');
     const navLinks = document.querySelectorAll("nav ul li a");
-    if(navMenu){
+
+    if(navBar){
       hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
         navBar.classList.toggle("active");
@@ -24,6 +24,18 @@
         })
       })
     }
+
+    //media query bug fix for ham menu
+    const mediaQuery = window.matchMedia('(min-width: 600px)')
+    function handleTabletChange(e) {
+      if (e.matches) {
+        hamburger.classList.remove("active");
+        navBar.classList.remove("active");
+      }
+    }
+
+    mediaQuery.addEventListener("change", handleTabletChange);
+    handleTabletChange(mediaQuery);
     
 
     //Contact Sheet
@@ -37,7 +49,7 @@
         contactSheet.classList.toggle("active");
         contact.classList.toggle("active");
         body.classList.toggle("no-scroll");
-        console.log("clicked contact toggle")
+        console.log("clicked contact toggle");
       });
     });
 

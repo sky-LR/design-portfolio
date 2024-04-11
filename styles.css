@@ -477,6 +477,24 @@ audio{
     border: solid black;
 }
 
+footer{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: var(--space-1);
+    padding: var(--space-1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: solid 1px var(--off-mid-grey);
+}
+
+footer h3{
+    margin: 0;
+    min-height: 20px;
+}
+
 @media (min-width: 600px) {
 
     :root {
@@ -552,23 +570,5 @@ audio{
 
     #splash{
         height: 100vh;
-    }
-
-    footer{
-        position: absolute;
-        left: 0;
-        width: 100%;
-        box-sizing: border-box;
-        margin-top: var(--space-1);
-        padding: var(--space-1);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-top: solid 1px var(--off-mid-grey);
-    }
-
-    footer h3{
-        margin: 0;
-        min-height: 20px;
     }
 }
