@@ -7,19 +7,20 @@
 
     //Hamburger Menu
     const hamburger = document.querySelector('.hamburger');
+    const navBar = document.querySelector('nav');
     const navMenu = document.querySelector('nav ul');
     const navLinks = document.querySelectorAll("nav ul li a");
     if(navMenu){
       hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
+        navBar.classList.toggle("active");
         console.log("clicked menu toggle")
       })
       
       navLinks.forEach(link => {
         link.addEventListener("click", () => {
           hamburger.classList.remove("active");
-          navMenu.classList.remove("active");
+          navBar.classList.remove("active");
         })
       })
     }

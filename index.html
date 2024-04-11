@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="stylesheet" href="https://use.typekit.net/ogn6gra.css">
     <link rel="stylesheet" href="https://use.typekit.net/zxs4vkp.css">
     <link href="styles.css" rel="stylesheet">
@@ -16,17 +16,17 @@
 </head>
 
 <!-- TODO LIST
-- mobile hamburger menu
 - use right viewport for mobile
+- optimize for mobile
 - implement text effect
 - optimize images
-- optimize for mobile
 - work switcher
 - clean up css
-- footer
 - Check accessibility
-- circle
+- make contact circle
 - improve header hierarchy
+- add alt text for all images
+- 
 
 DREAM LIST
 - image carosel on about page
@@ -61,18 +61,16 @@ LIST OF PORTFOLIO PIECES
 
 <body>
     <nav>
-        <img src="SVG/Sky.svg" width="100px">
-        <!-- <img src="SVG/Sky.svg" width="100px"> -->
+        <img src="SVG/Sky.svg" width="100">
+        <!-- <img src="SVG/Sky.svg" width="100"> -->
+        <div class="hamburger">
+            <span class="material-symbols-outlined">menu</span>
+        </div>
         <ul>
             <li><a id="abt-btn" class="btn" href="index.html">About</a></li>
             <li><a id="work-btn" class="btn" href="allWork.html">Work</a></li>
-            <li><a id="contact-btn" class="btn contact-toggle">Contact</a></li>
+            <li><a id="contact-btn" class="btn contact-toggle" href="#">Contact</a></li>
         </ul>
-        <div class="hamburger">
-            <span class="material-symbols-outlined">
-                menu
-            </span>
-        </div>
     </nav>
 
     <div id="contact-bg">
@@ -82,7 +80,7 @@ LIST OF PORTFOLIO PIECES
                 </span>
 
             <div id="contact-bio">
-                <img src="images/Hiromix Test.png">
+                <img src="images/portrait.png" alt="my-portrait">
                 <div>
                     <h3>Sky LaRoche</h3>
                     <p>
@@ -105,18 +103,16 @@ LIST OF PORTFOLIO PIECES
         <div id="textEffect">
             <img id="sourceSkyBlur" src="SVG/SkyBlur.svg">
             <img id="sourceSky" src="SVG/Sky.svg">
-            <canvas id="interaction" height="400px" width = "700px"></canvas>
-            <canvas id="grdCanvas" height="10px" width ="255px"></canvas>
+            <canvas id="interaction" height="400" width = "700"></canvas>
+            <canvas id="grdCanvas" height="10" width ="255"></canvas>
         </div>
         <div>
             <h1>Sky LaRoche</h1>
             <h3>Designer for a more beautiful life</h3>
         </div>
     </header>
-    
-    <h2>About Me</h2>
     <section id="aboutMe">
-        <!-- <img src="images/Hiromix Test.png" id="headShot"> -->
+        <!-- <img src="images/portrait.png" id="headShot"> -->
             <div id="head-shot"></div>
         <div id="about-me-text">
             <div>

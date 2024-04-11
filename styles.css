@@ -1,14 +1,8 @@
-/* font-family: "gimlet-sans-variable", sans-serif;
-font-variation-settings: "slnt" 0, "wght" 400, "opsz" 36; 
-
+/*
 font-family: "forma-djr-text", sans-serif;
 font-weight: 400;
 font-style: normal;
-
-font-family: "transducer-variable", sans-serif;
-font-variation-settings: "slnt" 0, "wdth" 100, "wght" 600;
 */
-
 
 /* --------------------- SETUP --------------------- */
 
@@ -39,56 +33,39 @@ font-variation-settings: "slnt" 0, "wdth" 100, "wght" 600;
 
 
 body{
-    /* font-family: "gimlet-sans-variable", sans-serif; */
-    /* font-family: "transducer-variable", sans-serif; */
-    font-family: "roc-grotesk-variable", sans-serif;
-    padding: var(--space-1);
     max-width: 1150px;
     margin: auto;
+    padding: var(--space-1);
+    font-family: "roc-grotesk-variable", sans-serif;
+    font-weight: normal;
+    color: var(--off-black);
     background-color: var(--off-white);
-    color: rgb(12, 12, 12);
 }
 
 .no-scroll{
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 /* --------------------- SPLASH SECTION --------------------- */
 
 #splash{
-    /* position: absolute; */
     max-width: 100%;
     height: 100vh;
     padding: var(--space-1);
     display: flex;
     align-items: flex-end;
     color: var(--off-white);
-    /* Mobile viewport update */
-    /* SVH LVH DVH*/
+    /* Mobile viewport update SVH LVH DVH*/
 }
 
-#splash div{
-    /* box-sizing: border-box; */
-    width: 100%;
-}
-
-#sourceSky{
-    display: none;
-    visibility: hidden;
-}
-
-#sourceSkyBlur{
+#sourceSky, #sourceSkyBlur{
     display: none;
     visibility: hidden;
 }
 
 #interaction{
-    /* position: absolute; */
-    /* height: 500px;
-    width: 700px; */
     top: 0;
     left: 0;
-    /* scale: 0.5; */
 }
 
 #grdCanvas{
@@ -98,30 +75,30 @@ body{
     visibility: hidden;
 }
 
+h1 , h2{
+    margin-bottom: var(--space-0);
+    font-variation-settings: "wght" 600, "opsz" 36;
+}
+
 h1{
     font-size: 70pt;
     line-height: 70pt;
     padding-top: var(--space-3);
-    margin-bottom: var(--space-0);
-    font-variation-settings: "wght" 600, "opsz" 36;
-    /* background-color: var(--my-yellow); */
-    /* border: solid 1px var(--off-grey);
-    border-style: none none solid none; */
-    /* margin-bottom: var(--space-2); */
 }
-
 
 h2{
     font-size: 36pt;
     line-height: 36pt;
     margin-top: 0;
-    margin-bottom: var(--space-0);
-    font-variation-settings: "wght" 550, "opsz" 24;
 }
 
 /* --------------------- NAV SECTION --------------------- */
 
 .hamburger{
+    position: absolute;
+    right:var(--space-1);
+    top: 37px;
+    transform: translate(0,-50%);
     display: block;
     cursor: pointer;
 }
@@ -131,12 +108,17 @@ nav{
     top: 0;
     left: 0;
     right: 0;
-    display: flex;
-    justify-content: space-between;
-    padding: var(--space-0);
     z-index: 1;
+    height: 60px;
+    padding: var(--space-0);
+    overflow: hidden;
     background-color: var(--off-white);
     border-bottom: solid 1px var(--off-mid-grey);
+    transition: height var(--time-1);
+}
+
+nav.active{
+    height: 270px;
 }
 
 ul{
@@ -146,11 +128,11 @@ ul{
 }
 
 nav ul{
+    /* position: fixed;
+    top: 80px; */
     display: flex;
-    position: fixed;
     flex-direction: column;
     gap: var(--space-0);
-    top: 80px;
 }
 
 li{
@@ -163,13 +145,12 @@ a{
 }
 
 .btn{
+    width: 100%;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
-    width:100%;
-    font-size: 14pt;
-    line-height: 14pt;
+    font: normal normal 14pt/14pt "roc-grotesk-variable", sans-serif;
     font-variation-settings: "wght" 400, "opsz" 14;
     color: var(--off-black);
     border-radius: var(--space-0);
@@ -181,18 +162,18 @@ a{
 }
 
 #abt-btn:hover{
-    background-color: var(--off-black);
     color: var(--off-white);
+    background-color: var(--off-black);
 }
 
 #work-btn:hover{
-    background-color: var(--my-red);
     color: var(--off-black);
+    background-color: var(--my-red);
 }
 
 #contact-btn:hover{
-    background-color: var(--my-blue);
     color: var(--off-white);
+    background-color: var(--my-blue);
 }
 
 /* --------------------- CONTACT CARD --------------------- */
@@ -203,11 +184,11 @@ a{
     right: 0;
     top: 0;
     bottom: 0;
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(12, 12, 12, 0.5);
-    z-index: 2;
     visibility: hidden;
     opacity: 0;
     transition: all var(--time-1);
@@ -220,10 +201,9 @@ a{
 
 #contact{
     position: absolute;
-    padding: var(--space-1);
-    width: 100%;
     max-width: 500px;
     margin: var(--space-1);
+    padding: var(--space-1);
     background-color: var(--off-white);
     border-radius: var(--space-0);
     transform: translate(0, 100px);
@@ -296,17 +276,16 @@ a{
 }
 
 #aboutMe h2 {
-    margin-top: var(--space-2);
+    margin-top: var(--space-1);
 }
 
 #head-shot{
-    /* flex: 5; */
     min-width: 300px;
     max-width: 600px;
     min-height: 600px;
     background-size: cover;
     background-position: center;
-    background-image: url(images/Hiromix\ Test.png);
+    background-image: url(images/portrait.png);
 }
 
 #skills{
@@ -318,12 +297,10 @@ a{
 }
 
 #skills ul li a{
+    padding: var(--space-0);
     display: flex;
     justify-content: space-between;
-    padding: var(--space-0);
-    font-size: 20pt;
-    line-height: 20pt;
-    font-weight: bold;
+    font: normal normal 20pt/20pt "roc-grotesk-variable", sans-serif;
     font-variation-settings: "wght" 400;
     border-bottom: solid 1px var(--off-mid-grey);
     transition: all var(--time-1);
@@ -340,15 +317,11 @@ a{
 
 /* --------------------- PORTFOLIO SECTIONS --------------------- */
 
-section{
-
-}
-
 #work-type{
-    border: solid 1px var(--off-mid-grey);
-    border-radius: var(--space-0);
     padding: var(--space-0);
     gap: var(--space-0);
+    border: solid 1px var(--off-mid-grey);
+    border-radius: var(--space-0);
 }
 
 #work-type a:hover{
@@ -366,17 +339,17 @@ section{
 
 article{
     padding: var(--space-1);
-    transition: all var(--time-1);
     background-color:var(--off-white);
+    border: solid 1px var(--off-white);
     border-radius: var(--space-0);
     transform: translate(0px, 100px);
     opacity: 0;
+    transition: all var(--time-1);
 }
 
 article:hover{
     cursor: pointer;
-    border: solid 1px var(--off-mid-grey);
-    /* background-color:var(--off-light-grey); */
+    border-color: var(--off-mid-grey);
     box-shadow: 0px 8px 15px var(--off-mid-grey)
 }
 
@@ -389,13 +362,11 @@ article:hover .article-image{
 }
 
 h3{
+    min-height: 40pt;
+    margin-bottom: var(--space-0);
     display: flex;
     align-items: end;
-    margin-bottom: var(--space-0);
-    min-height: 40pt;
-    font-size: 20pt;
-    line-height: 20pt;
-    font-weight: bold;
+    font: normal normal bold 20pt/20pt "roc-grotesk-variable", sans-serif;
     font-variation-settings: "wght" 400;
     transition: all var(--time-1);
 }
@@ -409,9 +380,9 @@ time{
 }
 
 .article-image-container {
-    margin-top: var(--space-0);
     width: 100%;
     height: 400px;
+    margin-top: var(--space-0);
     overflow: hidden;
 }
 
@@ -430,8 +401,8 @@ time{
     position: absolute;
     top: var(--space-1);
     left: var(--space-1);
-    color: var(--off-black);
     padding: var(--space-0);
+    color: var(--off-black);
 }
 
 .back-arrow:hover{
@@ -439,34 +410,34 @@ time{
 }
 
 .quick-look{
+    grid-column: 1 / 3;
     min-width: 250px;
+    margin: var(--space-1) 0 0 0;
+    padding: var(--space-1);
     border: solid 1px var(--off-mid-grey);
     border-radius: var(--space-0);
-    padding: var(--space-1);
-    grid-column: 1 / 3;
 }
 
 .quick-look div{
-    font:var(--text-font);
-    letter-spacing: 0.3pt;
-    color: var(--off-grey);
     margin-bottom: var(--space-0);
     padding-top: var(--space-0);
+    font:var(--text-font);
+    letter-spacing: 0.3pt;
     border-top: solid 1px var(--off-mid-grey);
 }
 
 .quick-look .tags{
     margin-block: var(--space-1);
-   display: flex;
-   flex-wrap: wrap;
-   gap: var(--space-0);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-0);
 }
 
 .quick-look .tags li{
     padding-block: 3px;
     padding-inline: var(--space-0);
     width: max-content;
-    font: normal normal 400 9pt/12pt "forma-djr-text", sans-serif;
+    font: normal normal 400 10pt/12pt "forma-djr-text", sans-serif;
     letter-spacing: 0.4pt;
     color: var(--off-grey);
     text-align: center;
@@ -477,6 +448,7 @@ time{
 .quick-look div ul{
     padding-left: var(--space-1);
     list-style: circle;
+    color: var(--off-grey);
 }
 
 p{
@@ -505,9 +477,6 @@ audio{
     border: solid black;
 }
 
-
-/* --------------------- DESKTOP --------------------- */
-
 @media (min-width: 600px) {
 
     :root {
@@ -517,6 +486,12 @@ audio{
 
     .hamburger{
         display: none;
+    }
+
+    nav{
+        height: max-content;
+        display: flex;
+        justify-content: space-between;
     }
 
     nav ul{
@@ -531,8 +506,8 @@ audio{
     }
 
     #aboutMe{
-        display: flex;
         min-width: 700px;
+        display: flex;
         gap: var(--space-1);
     }
 
@@ -543,8 +518,8 @@ audio{
     }
     
     #work-type{
-        display: flex;
         margin-bottom: var(--space-1);
+        display: flex;
         justify-content: space-evenly;
     }
 
@@ -552,11 +527,13 @@ audio{
         flex: 1;
         flex-grow: 1;
         min-width: 400px;
-        transition: flex-grow var(--time-1);
+        /* transition: flex-grow var(--time-1); */
+        transition: transform var(--time-1);
     }
 
     .article-anchor:hover{
-        flex-grow: 1.08;
+        /* flex-grow: 1.08; */
+        transform: scale(1.03);
     }
 
     .piece-container{
@@ -578,8 +555,20 @@ audio{
     }
 
     footer{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: var(--space-1);
+        padding: var(--space-1);
         display: flex;
         align-items: center;
         justify-content: space-between;
+        border-top: solid 1px var(--off-mid-grey);
+    }
+
+    footer h3{
+        margin: 0;
+        min-height: 20px;
     }
 }
