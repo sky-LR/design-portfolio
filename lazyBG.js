@@ -29,13 +29,12 @@
           const articles = document.querySelectorAll('article');
           const articleObserver = new IntersectionObserver(
             handleScrollInteraction,
-            { rootMargin: "10px" }
+            { rootMargin: "-50px" }
           );
           articles.forEach(article => articleObserver.observe(article));
 
           function handleScrollInteraction(entries) {
             entries.map((entry) => {
-              
               if (entry.isIntersecting) {
                 entry.target.style.transform = "translate(0px, 0px)";
                 entry.target.style.opacity = "1";

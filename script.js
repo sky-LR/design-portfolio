@@ -7,18 +7,26 @@
 
     //Hamburger Menu
     const hamburger = document.querySelector('.hamburger');
+    const icon = document.querySelector('.hamburger span')
     const navBar = document.querySelector('nav');
     const navLinks = document.querySelectorAll("nav ul li a");
 
     if(navBar){
       hamburger.addEventListener("click", () => {
+        
         hamburger.classList.toggle("active");
+        if (hamburger.classList.contains("active")){
+          icon.textContent = "close";
+        } else {
+          icon.textContent = "menu";
+        }
         navBar.classList.toggle("active");
         console.log("clicked menu toggle")
       })
       
       navLinks.forEach(link => {
         link.addEventListener("click", () => {
+          icon.textContent = "menu";
           hamburger.classList.remove("active");
           navBar.classList.remove("active");
         })
@@ -28,6 +36,7 @@
       const mediaQuery = window.matchMedia('(min-width: 600px)')
       function handleTabletChange(e) {
         if (e.matches) {
+          icon.textContent = "menu";
           hamburger.classList.remove("active");
           navBar.classList.remove("active");
         }
