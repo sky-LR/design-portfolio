@@ -4,6 +4,9 @@ font-weight: 400;
 font-style: normal;
 */
 
+/* my blue original #4542e9 
+    --my-red: rgb(233, 76, 66);*/
+
 /* --------------------- SETUP --------------------- */
 
 .material-symbols-outlined {
@@ -17,11 +20,11 @@ font-style: normal;
 :root {
     --off-white: #f7f4f2;
     --off-black: rgb(12, 12, 12);
-    --off-grey: rgb(102, 99, 97);
+    --off-grey: #666361;
     --off-light-grey: #eceae8;
-    --off-mid-grey: rgb(200, 198, 196);
-    --my-blue: rgb(69, 66, 233);
-    --my-red: rgb(233, 76, 66);
+    --off-mid-grey: #c8c6c4;
+    --my-blue: lch(43.68% 103.92 296.95);
+    --my-red: lch(62.5% 88.45 34.26);
     --my-yellow: rgb(250, 197, 61);
     --text-font: normal normal 400 12pt/20pt "forma-djr-text", sans-serif;
     --space-0 : 7px;
@@ -43,7 +46,7 @@ body{
 }
 
 .no-scroll{
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 /* --------------------- SPLASH SECTION --------------------- */
@@ -86,11 +89,11 @@ h1{
     padding-top: var(--space-3);
 }
 
-h2{
+/* h2{
     font-size: 36pt;
     line-height: 36pt;
     margin-top: 0;
-}
+} */
 
 /* --------------------- NAV SECTION --------------------- */
 
@@ -248,7 +251,7 @@ a{
    cursor: pointer;
 }
 
-#contact h3{
+#contact h2{
     margin: 0;
     min-height: 0;
 }
@@ -296,7 +299,7 @@ a{
     width: 100%;
 }
 
-#skills ul li a{
+#skills ul li a, #site-link{
     padding: var(--space-0);
     display: flex;
     justify-content: space-between;
@@ -306,7 +309,7 @@ a{
     transition: all var(--time-1);
 }
 
-#skills ul li a:hover{
+#skills ul li a:hover, #site-link:hover{
     background-color: var(--off-light-grey);
     font-variation-settings: "wght" 700;
 }
@@ -353,7 +356,7 @@ article:hover{
     box-shadow: 0px 8px 15px var(--off-mid-grey)
 }
 
-article:hover h3{
+article:hover h2{
     font-variation-settings: "wght" 700;
 }
 
@@ -361,7 +364,7 @@ article:hover .article-image{
     transform: scale(1.1);
 }
 
-h3{
+h2, h3{
     min-height: 40pt;
     margin-bottom: var(--space-0);
     display: flex;
@@ -420,7 +423,8 @@ time{
 
 .quick-look div{
     margin-bottom: var(--space-0);
-    padding-top: var(--space-0);
+    padding-inline: var(--space-0);
+    /* padding-top: var(--space-0); */
     font:var(--text-font);
     letter-spacing: 0.3pt;
     border-top: solid 1px var(--off-mid-grey);
@@ -490,9 +494,12 @@ footer{
     border-top: solid 1px var(--off-mid-grey);
 }
 
-footer h3{
+#copyright{
     margin: 0;
     min-height: 20px;
+    font: normal normal bold 20pt/20pt "roc-grotesk-variable", sans-serif;
+    font-variation-settings: "wght" 400;
+    transition: all var(--time-1);
 }
 
 @media (min-width: 600px) {

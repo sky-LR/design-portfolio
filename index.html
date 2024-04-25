@@ -16,6 +16,9 @@
 </head>
 
 <!-- TODO LIST
+- improve header hierarchy
+- add container on the body
+- add contact card links
 - use right viewport for mobile
 - optimize for mobile
 - implement text effect
@@ -23,10 +26,11 @@
 - work switcher
 - clean up css
 - Check accessibility
-- make contact circle
-- improve header hierarchy
+- make contact pic a circle
 - add alt text for all images
-- 
+- find better profile picture
+- add all portfolio pieces
+- host somewhere other than github
 
 DREAM LIST
 - image carosel on about page
@@ -69,54 +73,27 @@ LIST OF PORTFOLIO PIECES
         <ul>
             <li><a id="abt-btn" class="btn" href="index.html">About</a></li>
             <li><a id="work-btn" class="btn" href="allWork.html">Work</a></li>
-            <li><a id="contact-btn" class="btn contact-toggle" href="#">Contact</a></li>
+            <li><a id="contact-btn" class="btn contact-toggle">Contact</a></li>
         </ul>
     </nav>
 
-    <div id="contact-bg">
-        <div id="contact">
-                <span class="material-symbols-outlined contact-toggle">
-                    close
-                </span>
-
-            <div id="contact-bio">
-                <img src="images/portrait.png" alt="my-portrait">
-                <div>
-                    <h3>Sky LaRoche</h3>
-                    <p>
-                        Designer <br>
-                        <!-- skylaroche1@gmail.com<br>
-                        415-450-5378<br> -->
-                    </p>
-                </div>
-            </div>
-
-            <!-- <h2>Let's Talk!</h2> -->
-            <a class="btn">Email</a>
-            <a class="btn">Behance</a>
-            <a class="btn">Instagram</a>
-            <a class="btn">Schedule Meeting</a>
-        </div>
-    </div>
-
     <header id="splash">
+        <h1>Sky LaRoche</h1>
+        <h3>Designer for a more beautiful life</h3>
         <div id="textEffect">
             <img id="sourceSkyBlur" src="SVG/SkyBlur.svg">
             <img id="sourceSky" src="SVG/Sky.svg">
             <canvas id="interaction" height="400" width = "700"></canvas>
             <canvas id="grdCanvas" height="10" width ="255"></canvas>
         </div>
-        <div>
-            <h1>Sky LaRoche</h1>
-            <h3>Designer for a more beautiful life</h3>
-        </div>
     </header>
+
     <section id="aboutMe">
         <!-- <img src="images/portrait.png" id="headShot"> -->
             <div id="head-shot"></div>
         <div id="about-me-text">
             <div>
-                <h3>Welcome! I'm Sky LaRoche.</h3>
+                <h2>Welcome! I'm Sky LaRoche.</h2>
                 <p>
                     I'm a fourth-year UI/UX and Graphic Design student at UC Davis. My design approach combines a strong foundation in design principles with experimental flair, creating simple, readable interfaces with an artsy twist. Inspired by modernism, postmodernism, and metamodernism, I draw from diverse influences like handmade items, classic swiss typography, punk zines, and vintage electronics. Aspiring to be a UX unicorn, I bring solid HTML/CSS/JS skills to the table. Join me in a design journey that's all about innovation and breaking the mold. Check out my portfolio for a taste of creativity meeting functionality.
                 </p>
@@ -151,10 +128,31 @@ LIST OF PORTFOLIO PIECES
         </div>
     </section>
 
+    <div id="contact-bg">
+        <div id="contact">
+                <span class="material-symbols-outlined contact-toggle">
+                    close
+                </span>
+
+            <div id="contact-bio">
+                <img src="images/portrait.png" alt="my-portrait">
+                <div>
+                    <h2>Sky LaRoche</h2>
+                    <p>Designer</p>
+                </div>
+            </div>
+
+            <a class="btn">Email</a>
+            <a class="btn">Behance</a>
+            <a class="btn">Instagram</a>
+            <a class="btn">Schedule Meeting</a>
+        </div>
+    </div>
+
     <footer>
         <a>Valid HTML</a>
         <a>Valid CSS</a>
-        <h3>© 2024</h3>
+        <span id="copyright">© 2024</span>
     </footer>
 </body>
 </html>

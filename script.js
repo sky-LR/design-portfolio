@@ -23,19 +23,18 @@
           navBar.classList.remove("active");
         })
       })
-    }
 
-    //media query bug fix for ham menu
-    const mediaQuery = window.matchMedia('(min-width: 600px)')
-    function handleTabletChange(e) {
-      if (e.matches) {
-        hamburger.classList.remove("active");
-        navBar.classList.remove("active");
+      //media query bug fix for ham menu
+      const mediaQuery = window.matchMedia('(min-width: 600px)')
+      function handleTabletChange(e) {
+        if (e.matches) {
+          hamburger.classList.remove("active");
+          navBar.classList.remove("active");
+        }
       }
+      mediaQuery.addEventListener("change", handleTabletChange);
+      handleTabletChange(mediaQuery);
     }
-
-    mediaQuery.addEventListener("change", handleTabletChange);
-    handleTabletChange(mediaQuery);
     
 
     //Contact Sheet
